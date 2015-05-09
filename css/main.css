@@ -1,0 +1,145 @@
+body,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Microsoft YaHei", Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  color: #333;
+}
+.nextdo {
+  width: 100%;
+  border-bottom: 1px solid #cccccc;
+}
+.nextdo:after {
+  content: '.';
+  display: block;
+  zoom: 1;
+  height: 0;
+  visibility: hidden;
+  clear: both;
+}
+.header {
+  width: 100%;
+  background: #dddddd;
+  min-width: 600px;
+  height: 60px;
+  border-bottom: 1px solid #cccccc;
+}
+.header .name {
+  margin-left: 2%;
+  font-size: 25px;
+  color: #BEAD92;
+  font-weight: 600;
+  line-height: 60px;
+}
+.left-nav {
+  float: left;
+  width: 200px;
+  background: #f2f2f2;
+  border-right: 1px solid #cccccc;
+}
+.main-nav {
+  font-size: 18px;
+  min-height: 500px;
+  border-bottom: 1px solid #cccccc;
+}
+.main-nav > li {
+  margin-left: 8px;
+}
+.main-nav li {
+  margin-top: 10px;
+}
+.main-nav ul {
+  margin-left: 15px;
+  margin-right: 0;
+  list-style: none;
+}
+.main-nav .se-nav {
+  font-size: 16px;
+}
+.main-nav .th-nav {
+  font-size: 14px;
+}
+.main-nav .nav > p {
+  padding-left: 20px;
+  background: url(../images/nav.png) center left no-repeat;
+}
+.main-nav .task {
+  padding-left: 20px;
+  background: url(../images/task.png) center left no-repeat;
+}
+.add-new {
+  height: 40px;
+  line-height: 40px;
+  padding-left: 20px;
+  background: #f2f2f2;
+}
+.add-new > img {
+  width: 35px;
+  vertical-align: middle;
+}
+.add-new .name {
+  padding-left: 25px;
+  background: url(../images/add.png) center left no-repeat;
+  font-size: 17px;
+}
+.mid-nav {
+  width: 200px;
+  border-right: 1px solid #cccccc;
+  float: left;
+}
+.select {
+  height: 40px;
+  border-bottom: 1px solid #cccccc;
+  background: #f2f2f2;
+  position: relative;
+}
+.select .select-nav {
+  height: 25px;
+  list-style: none;
+  line-height: 25px;
+  margin-top: 15px;
+  position: absolute;
+  top: 50%;
+  margin-top: -13px;
+  left: 15px;
+}
+.select .select-nav > li {
+  float: left;
+  padding: 0 10px 0 10px;
+  cursor: pointer;
+}
+.list-detail {
+  min-height: 469px;
+  border-bottom: 1px solid #cccccc;
+}
+.list-detail ul {
+  list-style: none;
+  padding-left: 15px;
+}
+.list-detail li {
+  padding-left: 10px;
+}
+.right-content {
+  margin-left: 402px;
+}
+.item-name {
+  padding-left: 10px;
+  height: 50px;
+  line-height: 50px;
+  color: #000;
+  background: #f2f2f2;
+  font-size: 17px;
+  font-weight: 600;
+  border-bottom: 1px solid #f2f2f2;
+}
+.item-time {
+  height: 55px;
+  line-height: 55px;
+  border-bottom: 1px solid #f2f2f2;
+  font-size: 18px;
+  padding-left: 10px;
+}
