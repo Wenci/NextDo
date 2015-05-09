@@ -14,6 +14,7 @@ body {
     font-family: "Microsoft YaHei", Arial, Helvetica, sans-serif;
     font-size: 14px;
     color: #333;
+    min-width: 600px;
 }
 .nextdo {
     width: 100%;
@@ -31,8 +32,9 @@ body {
 .header {
     width: 100%;
     background: @header-bg;
-    min-width: 600px;
-height: 60px;
+
+min-width: 600px;
+    height: 60px;
     border-bottom: 1px solid@border-color;
 
 .name {
@@ -51,33 +53,47 @@ height: 60px;
 border-right: 1px solid@border-color;
 
 }
+@base-margin:10px;
 .main-nav {
     font-size: 18px;
     min-height: 500px;
     border-bottom: 1px solid@border-color;
-
->li {
-        margin-left: 8px;
-    }
     li {
         margin-top: 10px;
     }
+    li.active{
+        background: #fff;
+    }
     ul {
-        margin-left: 15px;
         margin-right: 0;
         list-style: none;
     }
-    .se-nav {
+    >li>p{
+        margin-left: @base-margin;
+    }
+    .se-nav{
         font-size: 16px;
+    }
+    .se-nav>p{
+        margin-left: @base-margin*2;
+    }
+    .se-nav .task>p{
+        margin-left: @base-margin*3;
     }
     .th-nav {
         font-size: 14px;
+    }
+    .th-nav>p{
+        margin-left: @base-margin*3;
+    }
+    .th-nav .task>p{
+        margin-left: @base-margin*4;
     }
     .nav>p {
         padding-left: 20px;
         background: url(../images/nav.png) center left no-repeat;
     }
-    .task {
+    .task>p {
         padding-left: 20px;
         background: url(../images/task.png) center left no-repeat;
     }
@@ -87,7 +103,8 @@ border-right: 1px solid@border-color;
     line-height: 40px;
     padding-left: 20px;
     background: @second-color;
-    >img {
+
+>img {
         width: 35px;
         vertical-align: middle;
     }
@@ -99,17 +116,18 @@ border-right: 1px solid@border-color;
 }
 .mid-nav {
     width: 200px;
-border-right: 1px solid@border-color;
+    border-right: 1px solid@border-color;
+
 float: left;
-    
 }
 .select {
     height: 40px;
     border-bottom: 1px solid@border-color;
 
 background: @second-color;
+
 position: relative;
-.select-nav {
+    .select-nav {
         height: 25px;
         list-style: none;
         line-height: 25px;
@@ -117,7 +135,7 @@ position: relative;
         position: absolute;
         top: 50%;
         margin-top: -13px;
-        left:15px;
+        left: 15px;
         >li {
             float: left;
             padding: 0 10px 0 10px;
@@ -125,35 +143,50 @@ position: relative;
         }
     }
 }
-.list-detail{
-    min-height: 469px;
-    border-bottom: 1px solid @border-color;
-    ul{
+.list-detail {
+    min-height: 464px;
+    border-bottom: 1px solid@border-color;
+
+ul {
         list-style: none;
+    }
+    li {
+        margin-top: 5px;
+    }
+    p {
+        font-size: 16px;
+    }
+    .list-time {
         padding-left: 15px;
     }
-    li{
-        padding-left: 10px;
+    .list-time+ul>li {
+        height: 25px;
+        line-height: 25px;
+    }
+    .list-time+ul>li>p {
+        padding-left: 25px;
     }
 }
-
-.right-content{
+.right-content {
     margin-left: 402px;
 }
-.item-name{
+.item-name {
     padding-left: 10px;
     height: 50px;
     line-height: 50px;
     color: #000;
     background: @second-color;
-    font-size: 17px;
+
+font-size: 17px;
     font-weight: 600;
-    border-bottom: 1px solid @second-color;
+    border-bottom: 1px solid@second-color;
+
 }
-.item-time{
+.item-time {
     height: 55px;
     line-height: 55px;
-    border-bottom: 1px solid @second-color;
-    font-size: 18px;
+    border-bottom: 1px solid@second-color;
+
+font-size: 18px;
     padding-left: 10px;
 }

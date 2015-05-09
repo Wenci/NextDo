@@ -8,6 +8,7 @@ body {
   font-family: "Microsoft YaHei", Arial, Helvetica, sans-serif;
   font-size: 14px;
   color: #333;
+  min-width: 600px;
 }
 .nextdo {
   width: 100%;
@@ -46,28 +47,42 @@ body {
   min-height: 500px;
   border-bottom: 1px solid #cccccc;
 }
-.main-nav > li {
-  margin-left: 8px;
-}
 .main-nav li {
   margin-top: 10px;
 }
+.main-nav li.active {
+  background: #fff;
+}
 .main-nav ul {
-  margin-left: 15px;
   margin-right: 0;
   list-style: none;
+}
+.main-nav > li > p {
+  margin-left: 10px;
 }
 .main-nav .se-nav {
   font-size: 16px;
 }
+.main-nav .se-nav > p {
+  margin-left: 20px;
+}
+.main-nav .se-nav .task > p {
+  margin-left: 30px;
+}
 .main-nav .th-nav {
   font-size: 14px;
+}
+.main-nav .th-nav > p {
+  margin-left: 30px;
+}
+.main-nav .th-nav .task > p {
+  margin-left: 40px;
 }
 .main-nav .nav > p {
   padding-left: 20px;
   background: url(../images/nav.png) center left no-repeat;
 }
-.main-nav .task {
+.main-nav .task > p {
   padding-left: 20px;
   background: url(../images/task.png) center left no-repeat;
 }
@@ -113,15 +128,27 @@ body {
   cursor: pointer;
 }
 .list-detail {
-  min-height: 469px;
+  min-height: 464px;
   border-bottom: 1px solid #cccccc;
 }
 .list-detail ul {
   list-style: none;
-  padding-left: 15px;
 }
 .list-detail li {
-  padding-left: 10px;
+  margin-top: 5px;
+}
+.list-detail p {
+  font-size: 16px;
+}
+.list-detail .list-time {
+  padding-left: 15px;
+}
+.list-detail .list-time + ul > li {
+  height: 25px;
+  line-height: 25px;
+}
+.list-detail .list-time + ul > li > p {
+  padding-left: 25px;
 }
 .right-content {
   margin-left: 402px;
