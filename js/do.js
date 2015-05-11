@@ -22,7 +22,6 @@ function getLocalStorage() {
 
 
 
-
 //测试用的JSON
 var obj = {
     'list': {
@@ -45,13 +44,12 @@ var obj = {
         list3: {
             name: "项目",
             list1: "新传学院BUG修复",
-            list2: "新传学院响应式布局"
+            list2: "新传学院响应式布局",
         }
     }
 };
 //初始化列表
 
-initListAndTask(obj);
 
 function initListAndTask(json) {
     //var xli = document.createElement("li");
@@ -62,7 +60,10 @@ function initListAndTask(json) {
     var activeLi = $(".task", newNodes);
     addClass(activeLi, "active");
     listParent.replaceChild(newNodes, listRow);
-
+    initSumTask();
+    addClickToTask(activeLi);
+    
+    //获得任务列表的节点
     function createListAndTaskNode(json, classT) {
         var li;
         var p;
@@ -87,15 +88,25 @@ function initListAndTask(json) {
         }
         return ul;
     }
+
+    //获得任务的总数
+    function initSumTask() {
+        var taskSum = getTaskNum(obj["list"]);
+        var list_sum = [];
+        list_sum.push($("#list_sum"));
+        list_sum.push($("#list_sum_all"));
+        for (var i = 0; i < list_sum.length; i++) {
+            list_sum[i].innerHTML = "&nbsp;(" + taskSum + ")";
+        }
+    }
 }
 
-console.log(getTaskNum(obj["list"][""]));
 //获取有多少个任务
 function getTaskNum(json) {
     var num = 0;
     for (y in json) {
         if (json[y] instanceof Object) {
-            num += getTaskNum(json[x]);
+            num += getTaskNum(json[y]);
         } else if (y != "name") {
             num++;
         }
@@ -103,6 +114,33 @@ function getTaskNum(json) {
     return num;
 }
 
+//给列表加上点击事件
+
+function addClickToTask(lastActiveLi){
+    var listAll = $("#list_all");
+    addEvent(listAll,"click",function(e){
+        var event = e || window.event;
+        var target = event.target || event.srcElement;
+        console.log(target.nodeName);
+        if(target.className === "delete"){  
+            //do something
+        }else if(target.className === "task active"){
+            return;
+        }else{
+            target = findParentTask(target);
+            removeClass(lastActiveLi,"active");
+            lastActiveLi = target;
+            addClass(target,"active");
+        }
+    });
+    
+    function findParentTask(target){
+        while(target.nodeName.toLowerCase() != "li"){
+            target = target.parentNode;
+        }
+        return target;
+    }
+}
 //制造一个分类节点
 function makeTask(value) {
     return "<p>" + value + "<span class='delete'>×</span></p>";
@@ -201,7 +239,7 @@ function getActiveListName() {
 }
 
 
-
+initListAndTask(obj);
 (function() {
     var add_list = $("#add_list");
     add_list.onclick = function() {
@@ -213,6 +251,9 @@ function getActiveListName() {
         togglePopUp();
         toggleAddList();
         var value = getNewListValue();
+        if(value === ""){
+            return;
+        }
         addNewListToHtml(value);
         addNewListToJson(obj, value);
         console.log(obj);

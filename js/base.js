@@ -59,3 +59,25 @@ function addClass(element, newClassName) {
 	};
     element.className =  element.className + " "+ newClassName;
 };
+
+//添加事件
+function addEvent(element, event, listener) {
+    if (element.addEventListener) {
+    	element.addEventListener(event,listener,false);
+    }else if(element.attachEvent){
+    	element.attachEvent("on"+event,listener);
+    }
+}
+
+// 移除element中的样式oldClassName
+function removeClass(element, oldClassName) {
+    var classes = element.className.split(" ");
+    var newClassName = "";
+	for (var i = 0; i < classes.length; i++) {
+		if(classes[i] == oldClassName){
+			continue;
+		}
+		newClassName = newClassName + classes[i] +" ";
+		element.className = newClassName.slice(0,newClassName.length-1);
+	};
+}

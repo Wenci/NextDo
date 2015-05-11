@@ -54,54 +54,61 @@ border-right: 1px solid@border-color;
 
 }
 @base-margin:10px;
+
 .main-nav {
     font-size: 18px;
     min-height: 500px;
     border-bottom: 1px solid@border-color;
-    li {
+
+li {
         margin-top: 10px;
     }
-    li.active{
+    li.active {
         background: #fff;
     }
     ul {
         margin-right: 0;
         list-style: none;
     }
-    >li>p{
+    >li>p {
         margin-left: @base-margin;
+
     }
-    .se-nav{
+    .se-nav {
         font-size: 16px;
     }
-    .se-nav>p{
+    .se-nav>p {
         margin-left: @base-margin*2;
+
     }
-    .se-nav .task>p{
+    .se-nav .task>p {
         margin-left: @base-margin*3;
+
     }
     .th-nav {
         font-size: 14px;
     }
-    .th-nav>p{
+    .th-nav>p {
         margin-left: @base-margin*3;
+
     }
-    .th-nav .task>p{
+    .th-nav .task>p {
         margin-left: @base-margin*4;
+
     }
     .nav>p {
         padding-left: 20px;
         background: url(../images/nav.png) center left no-repeat;
     }
-    .fi-nav>p{
-        background:none;
+    .fi-nav>p {
+        background: none;
         padding: 0px;
     }
     .task>p {
         padding-left: 20px;
         background: url(../images/task.png) center left no-repeat;
     }
-    .delete{
+    .delete {
         font-size: 22px;
         font-weight: 600;
         cursor: pointer;
@@ -111,19 +118,18 @@ border-right: 1px solid@border-color;
         margin-top: -5px;
         visibility: hidden;
     }
-    p:hover .delete{
+    p:hover .delete {
         visibility: visible;
     }
 }
-
 .add-new {
     height: 40px;
     line-height: 40px;
     padding-left: 20px;
     background: @second-color;
-    cursor: pointer;
 
->img {
+cursor: pointer;
+    >img {
         width: 35px;
         vertical-align: middle;
     }
@@ -189,7 +195,7 @@ ul {
 .right-content {
     margin-left: 402px;
 }
-.edit-com-img{
+.edit-com-img {
     width: 35px;
     height: 35px;
 }
@@ -204,7 +210,7 @@ font-size: 17px;
     font-weight: 600;
     border-bottom: 1px solid@second-color;
 
-    #complete{
+#complete {
         float: right;
         width: 42px;
         height: 42px;
@@ -212,7 +218,7 @@ font-size: 17px;
         cursor: pointer;
         margin-right: 10px;
     }
-    #edit{
+    #edit {
         float: right;
         width: 35px;
         height: 35px;
@@ -229,16 +235,19 @@ font-size: 17px;
 font-size: 18px;
     padding-left: 10px;
 }
-
-.popup{
+.popup {
     display: none;
     position: absolute;
     left: 0;
     top: 0;
     height: 100%;
     width: 100%;
-    background: rgba(0,0,0,0.5);
-    .confirm{
+    background: rgb(0, 0, 0);
+    /*不支持rgba的浏览器*/
+    background: rgba(0, 0, 0, .5);
+    /*支持rgba的浏览器*/
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#3363370b,endColorstr=#3363370b);
+    .confirm {
         display: none;
         position: absolute;
         top: 50%;
@@ -250,7 +259,7 @@ font-size: 18px;
         border: 1px solid #ddd;
         background: #fff;
     }
-    .add_new_list{
+    .add_new_list {
         display: none;
         width: 350px;
         height: 50px;

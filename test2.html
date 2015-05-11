@@ -1,0 +1,20 @@
+<style type="text/css">
+body{ background:url(http://gg.blueidea.com/2011/phpchina/phpchina_ad.gif)}
+#d1{width:300px; margin:100px auto; padding:50px;background:rgba(99, 55, 11, 0.2)}
+p{background-color:#fff; color:#000}
+#d2{background-color:#fff; width:600px; margin:0 auto; padding:10px; line-height:30px}
+</style>
+
+<!--[if lt IE 9]>
+<style>
+#d1{filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#3363370b,endColorstr=#3363370b);}
+</style>
+<![endif]-->
+
+<div id="d1">1、背景透明内容不透明<p>2、背景透明内容不透明</p></div>
+<div id="d2">
+没有什么好解释的，rgba参数(red,green.,blue,alpha),alpha值0-1<br />
+ie滤镜参数#3363370b，前两位为16进制透明度，<br />
+比如说值是上面用到的0.2，那么就是0.2×255＝51，再转换成16进制为33<br />
+至于10进制转换16进制，请查阅js函数toString(16)
+</div>
