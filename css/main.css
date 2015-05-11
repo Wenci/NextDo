@@ -82,15 +82,33 @@ body {
   padding-left: 20px;
   background: url(../images/nav.png) center left no-repeat;
 }
+.main-nav .fi-nav > p {
+  background: none;
+  padding: 0px;
+}
 .main-nav .task > p {
   padding-left: 20px;
   background: url(../images/task.png) center left no-repeat;
+}
+.main-nav .delete {
+  font-size: 22px;
+  font-weight: 600;
+  cursor: pointer;
+  display: block;
+  float: right;
+  margin-right: 10px;
+  margin-top: -5px;
+  visibility: hidden;
+}
+.main-nav p:hover .delete {
+  visibility: visible;
 }
 .add-new {
   height: 40px;
   line-height: 40px;
   padding-left: 20px;
   background: #f2f2f2;
+  cursor: pointer;
 }
 .add-new > img {
   width: 35px;
@@ -153,6 +171,10 @@ body {
 .right-content {
   margin-left: 402px;
 }
+.edit-com-img {
+  width: 35px;
+  height: 35px;
+}
 .item-name {
   padding-left: 10px;
   height: 50px;
@@ -163,10 +185,60 @@ body {
   font-weight: 600;
   border-bottom: 1px solid #f2f2f2;
 }
+.item-name #complete {
+  float: right;
+  width: 42px;
+  height: 42px;
+  margin-top: 5px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+.item-name #edit {
+  float: right;
+  width: 35px;
+  height: 35px;
+  margin-top: 7px;
+  cursor: pointer;
+  margin-right: 25px;
+}
 .item-time {
   height: 55px;
   line-height: 55px;
   border-bottom: 1px solid #f2f2f2;
   font-size: 18px;
   padding-left: 10px;
+}
+.popup {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+.popup .confirm {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -75px;
+  margin-left: -200px;
+  width: 400px;
+  height: 150px;
+  border: 1px solid #ddd;
+  background: #fff;
+}
+.popup .add_new_list {
+  display: none;
+  width: 350px;
+  height: 50px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -25px;
+  margin-left: -175px;
+  background: #fff;
+  padding-top: 15px;
+  padding-left: 15px;
 }

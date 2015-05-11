@@ -13,66 +13,74 @@
         <div class="header">
             <p class="name">NextDo</p>
         </div>
-        <div class="left-nav">
-            <ul class="main-nav">
+        <div class="left-nav" id="left_nav">
+            <ul class="main-nav" id="main_nav">
                 <li class="fi-nav">
                     <p><span>所有任务</span><span class="list-num">&nbsp;(11)</span>
                     </p>
                 </li>
-                <li class="fi-nav">
+                <li class="fi-nav nav" data-type="list" id="list_all">
                     <p><span>任务列表</span><span class="list-num">&nbsp;(11)</span>
                     </p>
-                    <ul>
-                        <li class="se-nav nav">
+                    <ul id="list_row">
+                        <li class="se-nav nav" data-type="list">
                             <p><span>百度IFE</span><span class="list-num">&nbsp;(11)</span>
+                                <span class="delete">×</span>
                             </p>
                             <ul>
-                                <li class="task">
-                                    <p>学习ps</p>
+                                <li class="task active">
+                                    <p>学习ps<span class="delete">×</span>
+                                    </p>
                                 </li>
-                                <li class="th-nav nav">
-                                    <p><span>第三周任务</span><span class="list-num">&nbsp;(11)</span>
+                                <li class="th-nav nav" data-type="list">
+                                    <p><span>第三周任务</span><span class="list-num">&nbsp;(11)</span><span class="delete">×</span>
                                     </p>
                                     <ul>
-                                        <li class="task active">
-                                            <p>NextDo布局</p>
+                                        <li class="task">
+                                            <p>NextDo布局<span class="delete">×</span>
+                                            </p>
                                         </li>
                                         <li class="task">
-                                            <p>Next动态效果</p>
+                                            <p>Next动态效果<span class="delete">×</span>
+                                            </p>
                                         </li>
                                     </ul>
                                 </li>
                                 <li class="task">
-                                    <p>学习布局</p>
+                                    <p>学习布局<span class="delete">×</span>
+                                    </p>
                                 </li>
                             </ul>
                         </li>
-                        <li class="se-nav nav">
-                            <p><span>学习生活</span><span class="list-num">&nbsp;(11)</span>
+                        <li class="se-nav nav" data-type="list">
+                            <p><span>学习生活</span><span class="list-num">&nbsp;(11)</span><span class="delete">×</span>
                             </p>
                             <ul>
                                 <li class="task">
-                                    <p>学lESS</p>
+                                    <p>学lESS<span class="delete">×</span>
+                                    </p>
                                 </li>
                                 <li class="task">
-                                    <p>宿舍节操值</p>
+                                    <p>宿舍节操值<span class="delete">×</span>
+                                    </p>
                                 </li>
                             </ul>
                         </li>
-                        <li class="se-nav nav">
-                            <p><span>项目</span><span class="list-num">&nbsp;(11)</span>
+                        <li class="se-nav nav" data-type="list">
+                            <p><span>项目</span><span class="list-num">&nbsp;(11)</span><span class="delete">×</span>
                             </p>
                             <ul>
                                 <li class="task">
-                                    <p>新传学院bug修复</p>
+                                    <p>新传学院bug修复<span class="delete">×</span>
+                                    </p>
                                 </li>
-                                
+
                             </ul>
                         </li>
                     </ul>
                 </li>
             </ul>
-            <div class="add-new">
+            <div class="add-new" id="add_list">
                 <span class="name">新增分类</span>
             </div>
         </div>
@@ -107,11 +115,28 @@
             </div>
         </div>
         <div class="right-content">
-            <div class="item-name"><span>to-do-6</span>
+            <div class="item-name">
+                <span>to-do-6</span>
+
+                <img src="./images/edit.png" alt="" id="edit">
+                <img src="./images/complete.png" alt="" id="complete">
             </div>
             <div class="item-time"><span>任务日期</span><span>2014-08-08</span>
             </div>
             <div class="item-detail">好好学习天坛向上，啦啦啦啦啦啦啦</div>
+        </div>
+    </div>
+    <div class="popup" id="popup">
+        <div class="confirm">
+            <p>确认删除?</p>
+            <div>确认</div>
+            <div>取消</div>
+        </div>
+        <div class="add_new_list" id="add_new_list">
+            <lable>新类名字</lable>
+            <input type="text" id="new_list_name" placeholder="请输入类名">
+            <input type="submit" value="确定" id="submit_new_list">
+            <input type="submit" value="取消" id="cancel_add_list">
         </div>
     </div>
     <script type="text/javascript" src="js/do.js"></script>

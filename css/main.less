@@ -93,16 +93,35 @@ border-right: 1px solid@border-color;
         padding-left: 20px;
         background: url(../images/nav.png) center left no-repeat;
     }
+    .fi-nav>p{
+        background:none;
+        padding: 0px;
+    }
     .task>p {
         padding-left: 20px;
         background: url(../images/task.png) center left no-repeat;
     }
+    .delete{
+        font-size: 22px;
+        font-weight: 600;
+        cursor: pointer;
+        display: block;
+        float: right;
+        margin-right: 10px;
+        margin-top: -5px;
+        visibility: hidden;
+    }
+    p:hover .delete{
+        visibility: visible;
+    }
 }
+
 .add-new {
     height: 40px;
     line-height: 40px;
     padding-left: 20px;
     background: @second-color;
+    cursor: pointer;
 
 >img {
         width: 35px;
@@ -170,6 +189,10 @@ ul {
 .right-content {
     margin-left: 402px;
 }
+.edit-com-img{
+    width: 35px;
+    height: 35px;
+}
 .item-name {
     padding-left: 10px;
     height: 50px;
@@ -181,6 +204,22 @@ font-size: 17px;
     font-weight: 600;
     border-bottom: 1px solid@second-color;
 
+    #complete{
+        float: right;
+        width: 42px;
+        height: 42px;
+        margin-top: 5px;
+        cursor: pointer;
+        margin-right: 10px;
+    }
+    #edit{
+        float: right;
+        width: 35px;
+        height: 35px;
+        margin-top: 7px;
+        cursor: pointer;
+        margin-right: 25px;
+    }
 }
 .item-time {
     height: 55px;
@@ -189,4 +228,39 @@ font-size: 17px;
 
 font-size: 18px;
     padding-left: 10px;
+}
+
+.popup{
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0,0.5);
+    .confirm{
+        display: none;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -75px;
+        margin-left: -200px;
+        width: 400px;
+        height: 150px;
+        border: 1px solid #ddd;
+        background: #fff;
+    }
+    .add_new_list{
+        display: none;
+        width: 350px;
+        height: 50px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -25px;
+        margin-left: -175px;
+        background: #fff;
+        padding-top: 15px;
+        padding-left: 15px;
+    }
 }
